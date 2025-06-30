@@ -1,4 +1,7 @@
+package com.example.jarumidle.model
+
 class PlayerNamesModel(
+
     private var player1: String,
     private var player2: String) {
 

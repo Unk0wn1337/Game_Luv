@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".controller.DifficultyActivity" android:exported="true"/>
+        <activity android:name=".controller.PlayerNamesActivity" android:exported="true"/>
     </application>
 
 </manifest>
