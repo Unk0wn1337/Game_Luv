@@ -1,0 +1,117 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/boardImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/board_image"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 4x4 rács cellái -->
+    <!-- 1. sor -->
+
+    <View
+        android:id="@+id/cell_00"
+        style="@style/BoardCell"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toTopOf="@id/boardImage" />
+
+    <View
+        android:id="@+id/cell_01"
+        style="@style/BoardCell"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@id/cell_02"
+        app:layout_constraintStart_toEndOf="@id/cell_00"
+        app:layout_constraintTop_toTopOf="@id/boardImage" />
+
+    <View
+        android:id="@+id/cell_02"
+        style="@style/BoardCell"
+        android:layout_width="32dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@id/cell_03"
+        app:layout_constraintStart_toEndOf="@id/cell_01"
+        app:layout_constraintTop_toTopOf="@id/boardImage" />
+
+    <View android:id="@+id/cell_03" style="@style/BoardCell"
+        app:layout_constraintTop_toTopOf="@id/boardImage"
+        app:layout_constraintStart_toEndOf="@id/cell_02"
+        app:layout_constraintEnd_toEndOf="@id/boardImage"/>
+
+    <!-- 2. sor -->
+    <View android:id="@+id/cell_10" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_00"
+        app:layout_constraintStart_toStartOf="@id/boardImage"/>
+
+    <View
+        android:id="@+id/cell_11"
+        style="@style/BoardCell"
+        app:layout_constraintStart_toEndOf="@id/cell_10"
+        app:layout_constraintTop_toBottomOf="@id/cell_01" />
+
+    <View android:id="@+id/cell_12" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_02"
+        app:layout_constraintStart_toEndOf="@id/cell_11"/>
+
+    <View android:id="@+id/cell_13" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_03"
+        app:layout_constraintStart_toEndOf="@id/cell_12"
+        app:layout_constraintEnd_toEndOf="@id/boardImage"/>
+
+    <!-- 3. sor -->
+    <View android:id="@+id/cell_20" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_10"
+        app:layout_constraintStart_toStartOf="@id/boardImage"/>
+
+    <View android:id="@+id/cell_21" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_11"
+        app:layout_constraintStart_toEndOf="@id/cell_20"/>
+
+    <View android:id="@+id/cell_22" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_12"
+        app:layout_constraintStart_toEndOf="@id/cell_21"/>
+
+    <View android:id="@+id/cell_23" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_13"
+        app:layout_constraintStart_toEndOf="@id/cell_22"
+        app:layout_constraintEnd_toEndOf="@id/boardImage"/>
+
+    <!-- 4. sor -->
+    <View android:id="@+id/cell_30" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_20"
+        app:layout_constraintBottom_toBottomOf="@id/boardImage"
+        app:layout_constraintStart_toStartOf="@id/boardImage"/>
+
+    <View android:id="@+id/cell_31" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_21"
+        app:layout_constraintBottom_toBottomOf="@id/boardImage"
+        app:layout_constraintStart_toEndOf="@id/cell_30"/>
+
+    <View android:id="@+id/cell_32" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_22"
+        app:layout_constraintBottom_toBottomOf="@id/boardImage"
+        app:layout_constraintStart_toEndOf="@id/cell_31"/>
+
+    <View android:id="@+id/cell_33" style="@style/BoardCell"
+        app:layout_constraintTop_toBottomOf="@id/cell_23"
+        app:layout_constraintBottom_toBottomOf="@id/boardImage"
+        app:layout_constraintStart_toEndOf="@id/cell_32"
+        app:layout_constraintEnd_toEndOf="@id/boardImage"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
