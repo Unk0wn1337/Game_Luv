@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
     private fun ButtonsIntialize() {
         buttonsModel = MainActivityButtonsModel(this)
         buttonsModel.setupStartButton()
-        buttonsModel.setupContinueButton()
     }
 
 }
