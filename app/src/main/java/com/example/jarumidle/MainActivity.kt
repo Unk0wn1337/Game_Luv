@@ -1,6 +1,8 @@
 package com.example.jarumidle
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,15 +15,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.buttonStart)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-                model = MessageModel("R Kelly")
-            insets
 
+        model = MessageModel("R Kelly")
 
+        val startButton = findViewById<Button>(R.id.buttonStart)
+        startButton.setOnClickListener {
+            val intent = Intent(this, DifficultyActivity::class.java)
+            startActivity(intent)
         }
     }
 

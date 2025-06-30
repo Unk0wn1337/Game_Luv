@@ -14,7 +14,7 @@
         android:contentDescription="@string/logo"
         app:srcCompat="@drawable/logo2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_margin="48dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
@@ -28,7 +28,7 @@
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/imageView"
-        app:layout_constraintTop_margin="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -41,7 +41,7 @@
         android:backgroundTint="#4CAF50"
         android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@id/textView"
-        app:layout_constraintTop_margin="40dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -54,7 +54,7 @@
         android:backgroundTint="#2196F3"
         android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@id/buttonStart"
-        app:layout_constraintTop_margin="20dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -67,7 +67,8 @@
         android:backgroundTint="#F44336"
         android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@id/buttonOptions"
-        app:layout_constraintTop_margin="20dp"
+        android:layout_marginTop="16dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
