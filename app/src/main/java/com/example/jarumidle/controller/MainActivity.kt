@@ -7,7 +7,7 @@ import com.example.jarumidle.model.MainActivityButtonsModel
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var startupButtons: MainActivityButtonsModel
+    private lateinit var buttonsModel: MainActivityButtonsModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +20,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ButtonsIntialize() {
-        startupButtons = MainActivityButtonsModel(this)
-        startupButtons.setupStartButton()
+        buttonsModel = MainActivityButtonsModel(this)
+        buttonsModel.setupStartButton()
+        buttonsModel.setupContinueButton()
     }
 
 }
