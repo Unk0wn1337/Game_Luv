@@ -1,5 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".PlayerInputActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Játékos 1 Cím -->
+        <TextView
+            android:id="@+id/player1Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Játékos 1"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Játékos 1 név -->
+        <EditText
+            android:id="@+id/editTextName1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Név"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/player1Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Játékos 1 nem -->
+        <RadioGroup
+            android:id="@+id/genderGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/editTextName1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioFemale1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lány" />
+
+            <RadioButton
+                android:id="@+id/radioMale1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fiú"
+                android:layout_marginStart="32dp" />
+        </RadioGroup>
+
+        <!-- Játékos 2 Cím -->
+        <TextView
+            android:id="@+id/player2Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Játékos 2"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/genderGroup1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Játékos 2 név -->
+        <EditText
+            android:id="@+id/editTextName2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Név"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/player2Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Játékos 2 nem -->
+        <RadioGroup
+            android:id="@+id/genderGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/editTextName2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioFemale2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lány" />
+
+            <RadioButton
+                android:id="@+id/radioMale2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fiú"
+                android:layout_marginStart="32dp" />
+        </RadioGroup>
+
+        <!-- Tovább Gomb -->
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tovább"
+            app:layout_constraintTop_toBottomOf="@id/genderGroup2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
