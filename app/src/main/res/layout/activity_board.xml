@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,99 +17,280 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- 4x4 rács cellái -->
-    <!-- 1. sor -->
+    <!-- 4x4 grid cells - all 16 cells properly defined -->
+
+    <!-- Row 1 -->
 
     <View
         android:id="@+id/cell_00"
         style="@style/BoardCell"
-        android:layout_width="29dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="46dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintStart_toStartOf="@id/boardImage"
         app:layout_constraintTop_toTopOf="@id/boardImage" />
 
     <View
         android:id="@+id/cell_01"
         style="@style/BoardCell"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toStartOf="@id/cell_02"
+        android:layout_width="22dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toStartOf="@id/cell_01"
         app:layout_constraintStart_toEndOf="@id/cell_00"
         app:layout_constraintTop_toTopOf="@id/boardImage" />
 
     <View
         android:id="@+id/cell_02"
         style="@style/BoardCell"
-        android:layout_width="32dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toStartOf="@id/cell_03"
+        android:layout_width="22dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintStart_toEndOf="@id/cell_01"
         app:layout_constraintTop_toTopOf="@id/boardImage" />
 
-    <View android:id="@+id/cell_03" style="@style/BoardCell"
-        app:layout_constraintTop_toTopOf="@id/boardImage"
+    <View
+        android:id="@+id/cell_03"
+        style="@style/BoardCell"
+        android:layout_width="22dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintStart_toEndOf="@id/cell_02"
-        app:layout_constraintEnd_toEndOf="@id/boardImage"/>
+        app:layout_constraintTop_toTopOf="@id/boardImage"/>
+    <View
+        android:id="@+id/cell_04"
+        style="@style/BoardCell"
+        android:layout_width="22dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/cell_03"
+        app:layout_constraintTop_toTopOf="@id/boardImage"/>
+    <View
+        android:id="@+id/cell_05"
+        style="@style/BoardCell"
+        android:layout_width="23dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/cell_04"
+        app:layout_constraintTop_toTopOf="@id/boardImage"/>
+    <View
+        android:id="@+id/cell_06"
+        style="@style/BoardCell"
+        android:layout_width="22dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/cell_05"
+        app:layout_constraintTop_toTopOf="@id/boardImage"/>
+    <View
+        android:id="@+id/cell_07"
+        style="@style/BoardCell"
+        android:layout_width="23dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/cell_06"
+        app:layout_constraintTop_toTopOf="@id/boardImage"/>
+    <View
+        android:id="@+id/cell_08"
+        style="@style/BoardCell"
+        android:layout_width="23dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/cell_07"
+        app:layout_constraintTop_toTopOf="@id/boardImage"/>
 
-    <!-- 2. sor -->
-    <View android:id="@+id/cell_10" style="@style/BoardCell"
-        app:layout_constraintTop_toBottomOf="@id/cell_00"
-        app:layout_constraintStart_toStartOf="@id/boardImage"/>
+    <View
+        android:id="@+id/cell_09"
+        style="@style/BoardCell"
+        android:layout_width="23dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/cell_08"
+        app:layout_constraintTop_toTopOf="@id/boardImage"/>
 
+    <View
+        android:id="@+id/cell_10"
+        style="@style/BoardCell"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/cell_09"
+        app:layout_constraintTop_toTopOf="@id/boardImage" />
     <View
         android:id="@+id/cell_11"
         style="@style/BoardCell"
-        app:layout_constraintStart_toEndOf="@id/cell_10"
-        app:layout_constraintTop_toBottomOf="@id/cell_01" />
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_00" />
 
-    <View android:id="@+id/cell_12" style="@style/BoardCell"
-        app:layout_constraintTop_toBottomOf="@id/cell_02"
-        app:layout_constraintStart_toEndOf="@id/cell_11"/>
+    <View
+        android:id="@+id/cell_12"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_11" />
 
-    <View android:id="@+id/cell_13" style="@style/BoardCell"
-        app:layout_constraintTop_toBottomOf="@id/cell_03"
-        app:layout_constraintStart_toEndOf="@id/cell_12"
-        app:layout_constraintEnd_toEndOf="@id/boardImage"/>
+    <View
+        android:id="@+id/cell_13"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_12" />
+    <View
+        android:id="@+id/cell_14"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_13" />
+    <View
+        android:id="@+id/cell_15"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_14" />
+    <View
+        android:id="@+id/cell_16"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_15" />
+    <View
+        android:id="@+id/cell_17"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_16" />
+    <View
+        android:id="@+id/cell_18"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_17" />
+    <View
+        android:id="@+id/cell_19"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_18" />
+    <View
+        android:id="@+id/cell_20"
+        style="@style/BoardCell"
+        android:layout_width="45dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@id/boardImage"
+        app:layout_constraintTop_toBottomOf="@id/cell_19" />
 
-    <!-- 3. sor -->
-    <View android:id="@+id/cell_20" style="@style/BoardCell"
-        app:layout_constraintTop_toBottomOf="@id/cell_10"
-        app:layout_constraintStart_toStartOf="@id/boardImage"/>
-
-    <View android:id="@+id/cell_21" style="@style/BoardCell"
+    <View
+        android:id="@+id/cell_21"
+        style="@style/BoardCell"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/cell_11"
         app:layout_constraintStart_toEndOf="@id/cell_20"/>
 
-    <View android:id="@+id/cell_22" style="@style/BoardCell"
+    <View
+        android:id="@+id/cell_22"
+        style="@style/BoardCell"
+        android:layout_width="32dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/cell_12"
         app:layout_constraintStart_toEndOf="@id/cell_21"/>
 
-    <View android:id="@+id/cell_23" style="@style/BoardCell"
+    <View
+        android:id="@+id/cell_23"
+        style="@style/BoardCell"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
         app:layout_constraintTop_toBottomOf="@id/cell_13"
         app:layout_constraintStart_toEndOf="@id/cell_22"
         app:layout_constraintEnd_toEndOf="@id/boardImage"/>
 
-    <!-- 4. sor -->
-    <View android:id="@+id/cell_30" style="@style/BoardCell"
+    <!-- Row 4 -->
+    <View
+        android:id="@+id/cell_30"
+        style="@style/BoardCell"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintTop_toBottomOf="@id/cell_20"
         app:layout_constraintBottom_toBottomOf="@id/boardImage"
         app:layout_constraintStart_toStartOf="@id/boardImage"/>
 
-    <View android:id="@+id/cell_31" style="@style/BoardCell"
+    <View
+        android:id="@+id/cell_31"
+        style="@style/BoardCell"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintTop_toBottomOf="@id/cell_21"
         app:layout_constraintBottom_toBottomOf="@id/boardImage"
         app:layout_constraintStart_toEndOf="@id/cell_30"/>
 
-    <View android:id="@+id/cell_32" style="@style/BoardCell"
+    <View
+        android:id="@+id/cell_32"
+        style="@style/BoardCell"
+        android:layout_width="32dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintTop_toBottomOf="@id/cell_22"
         app:layout_constraintBottom_toBottomOf="@id/boardImage"
         app:layout_constraintStart_toEndOf="@id/cell_31"/>
 
-    <View android:id="@+id/cell_33" style="@style/BoardCell"
+    <View
+        android:id="@+id/cell_33"
+        style="@style/BoardCell"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintTop_toBottomOf="@id/cell_23"
         app:layout_constraintBottom_toBottomOf="@id/boardImage"
         app:layout_constraintStart_toEndOf="@id/cell_32"
