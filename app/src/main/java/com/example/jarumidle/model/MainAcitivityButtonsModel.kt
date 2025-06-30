@@ -18,11 +18,5 @@ class MainActivityButtonsModel(private val activity: Activity) {
             activity.startActivity(intent)
         }
     }
-    fun setupContinueButton() {
-        val continueButton = activity.findViewById<Button>(R.id.buttonContinue)
-        continueButton.setOnClickListener {
-            val intent = Intent(activity, DifficultyActivity::class.java)
-            activity.startActivity(intent)
-        }
-    }
+
 }
